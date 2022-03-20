@@ -17,24 +17,30 @@
             <div class="col-12 col-md-3">
                 <form class="p-2" id="search-form">
                     <h4>Search for a City:</h4>
-                    <input id="city" type="text" class="w-100 form-control" autofocus class="form-input"/>
-                    <div class="mt-2">
+                    <input id="city" type="text" class="w-100 form-control" autofocus class="form-input" placeholder="Enter your city..."/>
+                    <div class="mt-2 btnDiv">
                         <button class="btn btn-primary p-2 search-btn w-100" type="submit">Search!</button>
                     </div>
                 </form>
-                <div class="border" id="past-search"></div>
+                <div class="border history-button" id="searchHistory"></div>
             </div>
-            <div class="col-12 col-md-9">
-                <div class="row border searched-city" id="current-weather">
-                    <div class="col-12">
-                        <h2 id="current-city"></h2>
-                        <div id="weather-container" class="list-group"></div>
+            
+            <div class="col-9 pb-3 pt-3" id="weather-content">
+                <div class="row border searched-city" id="city-detail">
+                    <div class="card col-12">
+                        <h2 class="card-header current-city" id="currentCity"></h2>
+                        <h3 class="card-header" id="currentDate"></h3>
+                        <img id="icons" src=""/>
+                        <div class="card-body" id="todayBody"></div>
                     </div>
                 </div>
-                <div class="row border">
-                    <h2 class="col-12" id="forecast"></h2>
-                    <div class="d-flex" id="five-day-forecast"></div>
+                <div class="pb-2 pt-1">
+                    <div class="col-12 ml-2">
+                        <h3>5-Day Forecast:</h3>
+                    </div>
                 </div>
+
+                <div id="fiveDay" class="row pl-2"></div>
             </div>
         </div>
     </main>
