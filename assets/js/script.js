@@ -19,6 +19,7 @@ let searchHistory = [];
 $(".search-btn").on("click", function (event){
     event.preventDefault();
     let city = $("#city").val().trim();
+    getWeather(city);
     console.log(city)
     // set a loop to append the search history under the search bar
     if (!searchHistory.includes(city)) {
@@ -29,9 +30,10 @@ $(".search-btn").on("click", function (event){
     };
 
     localStorage.setItem("city", JSON.stringify(searchHistory));
+    
 
-    console.log("click");
-    getWeather(city);
+    console.log(searchHistory);
+   
 });
 
 // search history items to be clickable
@@ -48,7 +50,7 @@ $(document).ready(function() {
         let lastSearchedCity = searchHisArr[searchHisIndex];
         getWeather(lastSearchedCity);
 
-    }
+    };
 });
 
 
