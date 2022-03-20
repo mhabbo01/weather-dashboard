@@ -25,7 +25,7 @@ $(".search-btn").on("click", function (event){
     if (!searchHistory.includes(city)) {
         searchHistory.push(city);
         let searchedCity = $(`
-        <li class="list-group-item bg-dark text-light">${city}</li>`);
+        <li class="list-group-item bg-dark text-light text-center">${city}</li>`);
         $("#searchHistory").append(searchedCity);
     };
 
